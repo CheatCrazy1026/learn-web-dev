@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    font-family: Roboto;
+}
+
+nav {
+
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+
+    background-color: #1F2937;
+}
+
+nav p {
+
+    font-size: 24px;
+    font-weight: bold;
+    color: #F9FAF8;
+}
+
+ul {
+
+    list-style: none;
+
+    display: flex;
+    gap: 20px;
+}
+
+a {
+    
+    font-size: 18px;
+    color: #E5E7EB;
+    text-decoration: none;
+}
+
+.hero-main-container {
+
+    height: 640px;
+
+    padding: 0px 20px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    color: #F9FAF8;
+    background-color: #1F2937;
+}
+
+.header-left {
+
+    width: 500px;
+    height: 300px;
+
+    margin-bottom: 20px;
+    padding-right: 20px;
+
+    font-size: 18px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.header-left h1 {
+
+    font-size: 48px;
+}
+
+.header-left button {
+
+    width: 100px;
+    
+    padding:8px 12px;
+
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    border: none;
+    border-radius: 4px;
+
+    color: #E5E7EB;
+    background-color: #3382F6;
+}
+
+.header-right {
+    
+    width: 500px;
+    height: 300px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: black;
+    background-color: lightgray;
+}
+
+.small-box-container-container {
+
+    margin-bottom: 60px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-box-container-container h2 {
+
+    margin: 60px 0px;
+
+    font-size: 36px;
+    font-weight: 900;
+
+    color: #1F2937;   
+}
+
+.small-box-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.small-box {
+
+    width: 200px;
+    height: 300px;
+}
+
+.small-box img {
+
+    border: solid 1px #3382F6;
+    border-radius: 20px;
+}
+
+.quote {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #E5E7EB;
+}
+
+.quote-container {
+
+    width: 800px;
+    height: 400px;
+
+    padding: 0px 10px;
+
+    font-style: italic;
+    font-size: 34px;
+    font-weight: 300;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #1F2937;
+}
+
+.quote-author {
+
+    margin-left: auto;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.call-container {
+
+    height: 300px;
+
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.call-container-container {
+
+    width: 900px;
+
+    padding: 30px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    color: #E5E7EB;
+    border-radius: 6px;
+    background-color: #3382F6;
+}
+
+.call-container-container button {
+
+    padding: 4px 18px;
+
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    flex-shrink: 0;
+
+    color: #E5E7EB;
+    border-radius: 6px;
+    border: solid 2px #E5E7EB;
+    background-color: #3382F6;
+}
+
+.call-text {
+    margin-right: 20px;
+}
+
+footer {
+    
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #E5E7EB;
+    background-color: #1F2937;
+}
+
+.center {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.game-btn {
+
+    width: 100px;
+    
+    padding:8px 12px;
+
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    border: none;
+    border-radius: 4px;
+
+    color: white;
+    background-color: #3382F6;
+}
+
+.fizz-buzz-contaner {
+
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#login-form-rps {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.win-lose {
+
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 140px;
+}
+
+.score-rps {
+
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}

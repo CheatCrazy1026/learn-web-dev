@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="./stylesheet.css">
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <nav>
+
+                <p>Rock Paper or Scissors</p>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="./fizzBuzz.html">Fizz Buzz</a></li>
+                    <li><a href="./rps.html">Rock Paper Scissors</a></li>
+                </ul>
+
+            </nav>
+
+            <h1 class="center">Welcome to Rock Paper Scissors!</h1>
+
+        </header>
+
+        <main>
+
+            <div class="fizz-buzz-contaner">
+
+                <p>Select one of the following!</p>
+
+                <form id="login-form-rps" novalidate>
+
+                    <div>
+                        <input type="radio" id="rock" name="fav" value="rock">
+                        <label for="rock">Rock</label> 
+                    </div>
+
+                    <div>
+                        <input type="radio" id="paper" name="fav" value="paper">
+                        <label for="paper">Paper</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="scissors" name="fav" value="scissors">
+                        <label for="scissors">Scissors</label>
+                    </div>
+
+                    <input type="submit" value="Submit" id="submit-button" class="game-btn">
+
+                </form>
+
+                <div class="container-rps">
+
+                    <div class="win-lose">
+                        <p class="player-title"></p>
+                        <p class="bot-title"></p>
+                    </div>
+
+                    <div class="score-rps">
+                        <p class="player-score">Your Score: 0</p>
+                        <p class="bot-score">Bot Score: 0</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </main>
+
+    </body>
+
+    <script src="main.js"></script>
+</html>
