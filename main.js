@@ -69,7 +69,7 @@ const scoreUpdate = WinTieLose => { // 4.
         botTitle.innerHTML    = "Loser";
 
         playerTitle.style.color = "green";
-        botTitle.style.color   = "red";
+        botTitle.style.color    = "red";
 
         playerScore.innerHTML = `Your Score: ${pScore}`;
 
@@ -79,7 +79,7 @@ const scoreUpdate = WinTieLose => { // 4.
         botTitle.innerHTML    = "Winner";
 
         playerTitle.style.color = "red";
-        botTitle.style.color   = "green";
+        botTitle.style.color    = "green";
 
         botScore.innerHTML = `Your Score: ${bScore}`;
 
@@ -89,7 +89,7 @@ const scoreUpdate = WinTieLose => { // 4.
         botTitle.innerHTML    = "Tie";
 
         playerTitle.style.color = "blue";
-        botTitle.style.color   = "blue";
+        botTitle.style.color    = "blue";
     }
 };
 
@@ -162,3 +162,44 @@ submitButtonRps?.addEventListener("submit", event => {
         scoreUpdate("Tie");
     }
 });
+
+/*
+
+   1. get the item from the user
+   2. get the list
+   3. add the item to the bottom of the list
+
+*/
+
+const shopBtn = document.querySelector("#login-form-shop");
+const item    = document.querySelector("#shop-Input");
+const list    = document.querySelector(".list");
+
+shopBtn.addEventListener("submit", event => {
+
+    event.preventDefault();
+
+    const myItem = item.value;
+    item.value = "";
+
+    const listItem = document.createElement("li");
+    const listText = document.createElement("span");
+    const listBtn = document.createElement("button");
+
+    listBtn.style.cssText = 'color:red; background:none; border: none; font-weight: bold;';
+
+    listItem.appendChild(listText);
+    listText.textContent = myItem;
+    listItem.appendChild(listBtn);
+    listBtn.textContent = "X";
+    list.appendChild(listItem);
+
+    listBtn.addEventListener("click", () => {
+
+        list.removeChild(listItem);
+    });
+
+    item.focus();
+});
+
+
