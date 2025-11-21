@@ -175,7 +175,7 @@ const shopBtn = document.querySelector("#login-form-shop");
 const item    = document.querySelector("#shop-Input");
 const list    = document.querySelector(".list");
 
-shopBtn.addEventListener("submit", event => {
+shopBtn?.addEventListener("submit", event => {
 
     event.preventDefault();
 
@@ -186,7 +186,7 @@ shopBtn.addEventListener("submit", event => {
     const listText = document.createElement("span");
     const listBtn = document.createElement("button");
 
-    listBtn.style.cssText = 'color:red; background:none; border: none; font-weight: bold;';
+    listBtn.style.cssText = 'color:red; background:none; border:none; font-weight:bold;';
 
     listItem.appendChild(listText);
     listText.textContent = myItem;
@@ -200,6 +200,85 @@ shopBtn.addEventListener("submit", event => {
     });
 
     item.focus();
+});
+
+
+/*
+
+   1. get the item from the user
+   2. make a loop for the amount of div * user input
+   3. add the div in a grid so if it input is 10 the grid will be 10 * 10;
+
+*/
+
+const gridInput   = document.querySelector("#grid-Input");
+const gridAddBtn  = document.querySelector("#grid-add-submit-button");
+const gridResBtn  = document.querySelector("#grid-restart-submit-button");
+const gridDiv     = document.querySelector(".square-container");
+const gridChild   = document.getElementsByClassName("square");
+
+const gridSize = 960;
+
+const createGrid = (size) => {
+
+    for (let i = 0; i < size ** 2; i++) {
+        
+        const child = document.createElement("div");
+        child.setAttribute("class", "square");
+        child.style.width = (gridSize / size) + "px";
+        child.style.height = (gridSize / size) + "px";
+        gridDiv?.appendChild(child);
+
+        console.log("Added squares to div.");
+    }
+
+    const squares = document.querySelectorAll(".square");
+
+    squares.forEach(square => {
+
+        square.addEventListener("mouseover", () => {
+
+            let color01 = Math.floor(Math.random() * 255);;
+            let color02 = Math.floor(Math.random() * 255);;
+            let color03 = Math.floor(Math.random() * 255);;
+
+            let opacity = Number(square.style.opacity) + 0.1;
+
+            square.style.backgroundColor = "rgb(" + color01 + "," + color02 + "," + color03 + ")";
+            square.style.borderColor = "rgb(" + color01 + "," + color02 + "," + color03 + ")";
+            square.style.opacity = opacity;
+
+            console.log(`Hovered! -> Opacity -> ${opacity}`);
+        });
+
+    });
+}
+
+createGrid(2);
+
+gridAddBtn?.addEventListener("click", () => {
+
+    // Error checking!
+    if(gridInput.value === "") { // If no input alert user with messsage!
+
+        return alert("[ERROR] -> You must input a valied number -> e.g 10");
+
+    } else if (gridInput.value <= 0){ // If input is 0 alert user with messsage!   
+
+        return alert("[ERROR] -> You must input a number above 0 -> e.g 1");
+
+    } else {
+        
+        // Remove all grid children.
+        while(gridChild.length > 0) {
+
+            gridChild[0].parentNode.removeChild(gridChild[0]);
+        }
+        console.log("Delete all squares");
+
+        // Call function that creates the grid children
+        createGrid(gridInput.value);
+    }
 });
 
 

@@ -5,7 +5,7 @@
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My shopping list</title>
+        <title>Etch A Sketch</title>
         <link rel="stylesheet" href="./stylesheet.css">
 
     </head>
@@ -16,9 +16,9 @@
 
             <nav>
 
-                <p>My Shopping List</p>
+                <p>Etch-A-Sketch</p>
                 <ul>
-                    
+
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="">About Us</a></li>
                     <li><a href="">Contact Us</a></li>
@@ -31,34 +31,28 @@
 
             </nav>
 
-            <h1 class="center">Welcome to my shopping list!</h1>
+            <h1 class="center">Welcome to my Etch A Sketch!</h1>
 
         </header>
 
         <main>
 
+
             <div class="fizz-buzz-contaner">
+                
+                <div>
+                    <p>Imput your disierd size! or Restart with same size!</p>
+                    <input id="grid-Input" type="number" placeholder="Enter a number!"/>
+                    <input type="submit" value="Build!" id="grid-add-submit-button" class="game-btn">
+                    <input type="submit" value="Restart" id="grid-restart-submit-button" class="game-btn"> 
+                </div>
 
-                <p>Add an item to your shopping list!</p>
-
-                <form id="login-form-shop" novalidate>
-
-                    <input id="shop-Input" type="text" placeholder="Rum...."/>
-                    <input type="submit" value="Add Item!" id="shop-submit-button" class="game-btn">
-
-                </form>
-
-                <div class="shopping-list">
-
-                    <h2 class="center1">My Shopping List</h2>
-
-                    <ul class="list">
-
-                    </ul>
-
+                <div class="square-container">
+                    
                 </div>
 
             </div>
+
 
         </main>
 
